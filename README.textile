@@ -1,3 +1,7 @@
+h2. Link to assembly instructions
+https://drive.google.com/open?id=1v5qDFFKT4R7Wof0ni-ZruPyz7_-t37Yf_-p0rpWy01o
+
+
 h1. Pololu Zumo Shield Libraries
 
 Version: 1.2.3

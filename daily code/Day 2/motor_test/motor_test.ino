@@ -10,6 +10,8 @@
  * off while it moves backward
  */
 
+#include <ZumoMotors.h>
+
 #define LED_PIN 13
 
 ZumoMotors motors;

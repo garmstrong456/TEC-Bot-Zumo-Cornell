@@ -9,25 +9,21 @@
 */
 
 const int BLINK_TIME = 500;   //Delay between the LED turning off and on
-long lastBlinkTime;           //time when the LED last changed state
-boolean LEDState;             //current state of the LED (HIGH or LOW)
+long nextBlinkTime = 0;       //time when the LED last changed state
+boolean LEDState = HIGH;      //current state of the LED (HIGH or LOW)
 
 
 void setup() {
   Serial.begin(9600);   //Initialize Serial communication
   pinMode(13, OUTPUT);  //Setup pin 13 as an output
-
-
-  digitalWrite(13, HIGH);   //Start with the LED on
-  lastBlinkTime = millis(); //record when the LED turned on
 }
 
 void loop() {
 
-  if (millis() > lastBlinkTime + BLINK_TIME) {  //Check to see if BLINK_TIME milliseconds have ellapsed
+  if (millis() > nextBlinkTime) { //Check to see if BLINK_TIME milliseconds have ellapsed
     LEDState = !LEDState;         //switch the state of the LED (HIGH --> LOW or LOW --> HIGH)
     digitalWrite(13, LEDState);   //apply the changes to the LED
-    lastBlinkTime = millis();     //record the time
+    nextBlinkTime = millis() + BLINK_TIME;   //record the time
   }
 
 }

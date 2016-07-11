@@ -32,6 +32,9 @@ const int MAX_SPEED = 400;
 
 void setup()
 {
+  motors.flipLeftMotor(true);
+  motors.flipRightMotor(true);
+    
   // Play a little welcome song
   buzzer.play(">g32>>c32");
 

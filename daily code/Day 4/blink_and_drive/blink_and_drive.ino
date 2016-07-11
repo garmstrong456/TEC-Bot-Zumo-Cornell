@@ -34,7 +34,7 @@ void loop() {
   }
 
   //Check to see if the motor should reverse direction
-  if (millis() > nextMotorTime) {
+  if (millis() >= nextMotorTime) {
     motorSpeed = -motorSpeed;
     motors.setLeftSpeed(motorSpeed);
     motors.setRightSpeed(motorSpeed);

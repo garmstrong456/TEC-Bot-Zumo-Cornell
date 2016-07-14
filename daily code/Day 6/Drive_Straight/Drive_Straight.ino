@@ -34,7 +34,7 @@ double kp = .1;
 double kd = 0;
 
 //******Max Speed******
-int totalSpeed = 200
+int totalSpeed = 200;
 
 long leftPosition = 0, rightPosition = 0;
 long error, lastError = 0;
